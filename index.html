@@ -17,52 +17,59 @@
       padding: 24px;
       margin: 0;
     }
-    .container { max-width: 900px; margin: 0 auto; }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
     header {
-      display: flex; align-items: center; gap: 16px; margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
     }
-    header img { height: 56px; width: auto; border-radius: 6px; }
+    header img {
+      height: 56px;
+      width: auto;
+    }
     .adviser-info {
-      font-size: 0.85rem; color: var(--brand); font-style: italic; margin-top: 4px;
+      font-size: 0.85rem;
+      color: var(--brand);
+      font-style: italic;
+      margin-top: 4px;
     }
-    h1 { font-size: 1.3rem; margin: 0; color: var(--brand); }
+    h1 {
+      font-size: 1.3rem;
+      margin: 0;
+      color: var(--brand);
+    }
     .card {
-      background: var(--card); border-radius: 12px;
+      background: var(--card);
+      border-radius: 12px;
       box-shadow: 0 6px 18px rgba(2,6,23,0.08);
-      padding: 18px; margin-top: 16px;
+      padding: 18px;
+      margin-top: 16px;
     }
     .grid { display: grid; gap: 12px; }
     .cols-2 { grid-template-columns: 1fr 1fr; }
     label { font-size: 0.85rem; color: var(--muted); display: block; margin-bottom: 6px; }
     input, select, textarea {
-      width: 100%; padding: 10px;
-      border: 1px solid #e6e7ea; border-radius: 8px; font-size: 0.95rem;
-      box-sizing: border-box;
+      width: 100%; padding: 10px; border: 1px solid #e6e7ea; border-radius: 8px; font-size: 0.95rem; box-sizing: border-box;
     }
-    .actions { display: flex; justify-content: flex-end; margin-top: 14px; }
-    button {
-      border: 0; padding: 10px 16px; border-radius: 10px;
-      font-weight: 600; cursor: pointer;
-    }
+    .row { display: flex; gap: 12px; }
+    .small { width: 120px; }
+    .actions { display: flex; gap: 12px; justify-content: flex-end; margin-top: 14px; }
+    button { border: 0; padding: 10px 14px; border-radius: 10px; font-weight: 600; cursor: pointer; }
     .btn-yellow { background: var(--accent); color: #032; }
     .note { font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
-    .section-title {
-      font-weight: 700; color: var(--brand); margin-bottom: 8px;
-      display: flex; align-items: center; gap: 8px;
-    }
-    .document-options {
-      display: flex; gap: 20px; flex-wrap: wrap; align-items: center; margin-top: 8px;
-    }
-    .document-options label {
-      display: flex; align-items: center; gap: 6px; font-size: 0.95rem;
-    }
-    @media (max-width:720px){
-      .cols-2 { grid-template-columns:1fr; }
-      header img { height: 48px; }
-    }
+    footer { margin-top: 12px; font-size: 0.85rem; color: var(--muted); }
+    .section-title { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; font-weight: 700; color: var(--brand); }
+    .document-options { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
+    .document-options label { display: flex; align-items: center; gap: 6px; font-size: 0.95rem; }
+    @media (max-width: 720px) { .cols-2 { grid-template-columns: 1fr; } header img { height: 48px; } }
   </style>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -75,7 +82,7 @@
   </header>
 
   <form id="licForm" class="card" autocomplete="off">
-    <!-- PERSONAL -->
+    <!-- Personal Details -->
     <section>
       <div class="section-title">👤 Personal Details</div>
       <div class="grid cols-2">
@@ -83,8 +90,7 @@
         <div><label for="dob">Date of Birth</label><input id="dob" name="dob" type="date"></div>
         <div><label for="mobile">Mobile Number</label><input id="mobile" name="mobile" type="tel"></div>
         <div><label for="email">Email</label><input id="email" name="email" type="email"></div>
-        <div>
-          <label for="mode">Payment Mode</label>
+        <div><label for="mode">Payment Mode</label>
           <select id="mode" name="mode">
             <option selected disabled>Select</option>
             <option value="QTY">QTY</option>
@@ -93,38 +99,30 @@
           </select>
         </div>
         <div><label for="pan">PAN</label><input id="pan" name="pan" type="text" maxlength="10"></div>
-        <div>
-          <label for="aadhar">Aadhaar Number</label>
-          <input id="aadhar" name="aadhar" type="text" maxlength="12"
-                 pattern="\d{12}" title="Enter 12 digit Aadhaar number"
-                 oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-        </div>
+        <div><label for="aadhar">Aadhaar Number</label><input id="aadhar" name="aadhar" type="text" maxlength="12" pattern="\d{12}" title="Enter 12 digit Aadhaar number"></div>
       </div>
     </section>
 
+    <!-- Family Details -->
     <hr>
-
-    <!-- FAMILY -->
     <section>
       <div class="section-title">👨‍👩‍👧 Family Details</div>
       <div class="grid cols-2">
         <div><label for="father">Father's Name</label><input id="father" name="father"></div>
         <div><label for="spouse">Spouse's Name</label><input id="spouse" name="spouse"></div>
         <div><label for="spouseIncome">Spouse Job & Income</label><input id="spouseIncome" name="spouseIncome"></div>
-        <div><label for="fatherAge">Father Age</label><input id="fatherAge" name="fatherAge" type="number"></div>
-        <div><label for="motherAge">Mother Age</label><input id="motherAge" name="motherAge" type="number"></div>
+        <div><label for="fatherAge">Father Age</label><input id="fatherAge" name="fatherAge" type="number" class="small"></div>
+        <div><label for="motherAge">Mother Age</label><input id="motherAge" name="motherAge" type="number" class="small"></div>
       </div>
     </section>
 
+    <!-- Employment Details -->
     <hr>
-
-    <!-- JOB -->
     <section>
       <div class="section-title">🏢 Employment Details</div>
       <div class="grid cols-2">
         <div><label for="job">Job</label><input id="job" name="job"></div>
-        <div>
-          <label for="qualification">Qualification</label>
+        <div><label for="qualification">Qualification</label>
           <select id="qualification" name="qualification">
             <option selected disabled>Select</option>
             <option>High School</option>
@@ -139,31 +137,28 @@
       </div>
     </section>
 
+    <!-- Address & Bank -->
     <hr>
-
-    <!-- ADDRESS -->
     <section>
       <div class="section-title">🏠 Address & Bank</div>
       <div class="grid">
         <div><label for="address">Address</label><textarea id="address" name="address" rows="2"></textarea></div>
         <div class="cols-2" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px">
-          <div><label for="account">Account Number</label><input id="account" name="account" type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');"></div>
+          <div><label for="account">Account Number</label><input id="account" name="account" type="number"></div>
           <div><label for="ifsc">IFSC Code</label><input id="ifsc" name="ifsc"></div>
         </div>
       </div>
     </section>
 
+    <!-- Physical & Policy -->
     <hr>
-
-    <!-- PHYSICAL -->
     <section>
       <div class="section-title">⚖️ Physical Details & Nominee</div>
       <div class="grid cols-2">
         <div><label for="height">Height (cm)</label><input id="height" name="height" type="number" max="9999" step="0.1"></div>
         <div><label for="weight">Weight (kg)</label><input id="weight" name="weight" type="number" max="99"></div>
         <div><label for="nominee">Nominee</label><input id="nominee" name="nominee"></div>
-        <div>
-          <label for="policy">Do you have an LIC Policy?</label>
+        <div><label for="policy">Do you have an LIC Policy?</label>
           <select id="policy" name="policy">
             <option selected disabled>Select</option>
             <option>Yes</option>
@@ -174,9 +169,8 @@
       </div>
     </section>
 
+    <!-- Documents -->
     <hr>
-
-    <!-- DOCUMENTS -->
     <section>
       <div class="section-title">📎 Document Submission</div>
       <p>Please submit the below documents (tick the ones provided):</p>
@@ -195,36 +189,73 @@
 </div>
 
 <script>
-emailjs.init("4kosQtFaQpZ-KrwHy"); // your EmailJS public key
+  // Initialize EmailJS
+  (function(){ emailjs.init("4kosQtFaQpZ-KrwHy"); })();
 
-document.getElementById('generatePdf').addEventListener('click', async (e) => {
-  e.preventDefault();
-  try {
-    // Generate PDF
-    const clone = document.getElementById('licForm').cloneNode(true);
-    clone.querySelectorAll('.actions').forEach(b => b.remove());
-    const wrapper = document.createElement('div');
-    wrapper.style.padding = '18px';
-    wrapper.appendChild(clone);
+  document.getElementById('generatePdf').addEventListener('click', async () => {
+    const form = document.getElementById('licForm');
 
-    const opt = {
-      margin: 10,
-      filename: `LIC_DataSheet_${document.getElementById('name').value || 'Name'}.pdf`,
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    };
+    // 1️⃣ Generate PDF
+    try {
+      const clone = form.cloneNode(true);
+      clone.querySelectorAll('.actions').forEach(b => b.remove());
+      const wrapper = document.createElement('div');
+      wrapper.style.padding = '18px';
+      wrapper.style.fontFamily = 'Arial, Helvetica, sans-serif';
+      wrapper.style.color = '#111';
+      wrapper.appendChild(clone);
 
-    await html2pdf().from(wrapper).set(opt).save();
+      const opt = {
+        margin: 10,
+        filename: `LIC_DataSheet_${document.getElementById('name').value || 'Name'}.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
 
-    // Send Email
-    await emailjs.sendForm("service_uwe50x9", "template_yeal3ns", document.getElementById("licForm"));
-    alert("✅ PDF downloaded and email sent successfully!");
-  } catch (err) {
-    console.error(err);
-    alert("❌ Error: " + err.message);
-  }
-});
+      await html2pdf().from(wrapper).set(opt).save();
+      alert('✅ PDF generated successfully.');
+    } catch(err) {
+      console.error(err);
+      alert('❌ Failed to generate PDF: ' + err.message);
+    }
+
+    // 2️⃣ Send Email via EmailJS
+    emailjs.send("service_uwe50x9", "template_yeal3ns", {
+      name: form.name.value,
+      dob: form.dob.value,
+      mobile: form.mobile.value,
+      email: form.email.value,
+      mode: form.mode.value,
+      pan: form.pan.value,
+      aadhar: form.aadhar.value,
+      father: form.father.value,
+      spouse: form.spouse.value,
+      spouseIncome: form.spouseIncome.value,
+      fatherAge: form.fatherAge.value,
+      motherAge: form.motherAge.value,
+      job: form.job.value,
+      qualification: form.qualification.value,
+      employer: form.employer.value,
+      income: form.income.value,
+      address: form.address.value,
+      account: form.account.value,
+      ifsc: form.ifsc.value,
+      height: form.height.value,
+      weight: form.weight.value,
+      nominee: form.nominee.value,
+      policy: form.policy.value,
+      policyNo: form.policyNo.value,
+      docAadhar: form.querySelector('input[name="docAadhar"]').checked ? "Yes" : "No",
+      docSSLC: form.querySelector('input[name="docSSLC"]').checked ? "Yes" : "No",
+      docBank: form.querySelector('input[name="docBank"]').checked ? "Yes" : "No"
+    }).then(() => {
+      alert('📧 Form sent successfully via email!');
+    }, (err) => {
+      console.error(err);
+      alert('❌ Failed to send email. Check EmailJS configuration.');
+    });
+  });
 </script>
 </body>
 </html>
