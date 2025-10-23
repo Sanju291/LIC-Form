@@ -1,306 +1,245 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>LIC Customer Data Sheet — Sathi M</title>
-  <style>
-    :root {
-      --accent: #f5b800;
-      --brand: #003366;
-      --card: #ffffff;
-      --muted: #555;
-    }
-    body {
-      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      background: #f1f5f9;
-      padding: 16px;
-      margin: 0;
-      color: #111827;
-    }
-    .container {
-      max-width: 920px;
-      margin: 0 auto;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 16px;
-      background: var(--card);
-      padding: 12px 18px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    header img {
-      height: 70px;
-      width: auto;
-    }
-    h1 {
-      color: var(--brand);
-      font-size: 1.5rem;
-      margin: 4px 0 0 0;
-      font-weight: 700;
-    }
-    .advisor-info {
-      font-size: 0.85rem;
-      color: var(--muted);
-      font-style: italic;
-    }
-    .card {
-      background: var(--card);
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-      padding: 20px;
-      margin-top: 20px;
-    }
-    .grid {
-      display: grid;
-      gap: 12px;
-    }
-    .cols-2 {
-      grid-template-columns: 1fr 1fr;
-    }
-    label {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-bottom: 4px;
-      display: block;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #d1d5db;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      box-sizing: border-box;
-      outline-color: var(--accent);
-    }
-    .actions {
-      display: flex;
-      justify-content: flex-end;
-      margin-top: 18px;
-    }
-    button {
-      background: var(--accent);
-      color: #032;
-      font-weight: 600;
-      border: none;
-      padding: 10px 16px;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-    button:hover {
-      opacity: 0.9;
-    }
-    footer {
-      text-align: center;
-      margin-top: 12px;
-      font-size: 0.9rem;
-      color: var(--brand);
-      font-weight: 500;
-    }
-    .section-title {
-      font-weight: 700;
-      color: var(--brand);
-      margin-bottom: 8px;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid #e2e8f0;
-      margin: 16px 0;
-    }
-    .checkbox-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-top: 6px;
-    }
-    .checkbox-group label {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LIC Customer Data Sheet — Sathi M</title>
+<style>
+:root {
+  --lic-blue: #003366;
+  --lic-yellow: #f5b800;
+  --bg: #f9fafb;
+  --text: #111827;
+  --muted: #6b7280;
+  --card: #fff;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  max-width: 900px;
+  width: 100%;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+header img {
+  height: 60px;
+  border-radius: 6px;
+}
+.adviser {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-left: 4px;
+  line-height: 1.2;
+}
+h1 {
+  color: var(--lic-blue);
+  font-size: 1.5rem;
+  margin: 0 0 6px 0;
+}
+.card-section {
+  margin-top: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+.section-title {
+  font-weight: 700;
+  color: var(--lic-blue);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #fff4b3;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+.grid {
+  display: grid;
+  gap: 10px;
+}
+.cols-2 { grid-template-columns: 1fr 1fr; }
+@media(max-width:720px){ .cols-2{grid-template-columns:1fr;} }
+label { font-size: 0.9rem; color: var(--lic-blue); display: block; margin-bottom: 4px; }
+input, select, textarea {
+  width: 100%; padding: 9px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 0.95rem;
+}
+input:hover, select:hover, textarea:hover { background: #fffbea; }
+.actions { display: flex; justify-content: flex-end; margin-top: 18px; }
+button {
+  border: none; padding: 12px 20px; border-radius: 8px;
+  background: linear-gradient(90deg, var(--lic-blue), var(--lic-yellow));
+  color: white; font-weight: 600; font-size: 1rem; cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15); transition: all 0.2s ease-in-out;
+}
+button:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+.document-list { display: grid; gap: 10px; margin-top: 10px; }
+.doc-item { border: 1px solid #d1d5db; border-radius: 8px; padding: 10px 12px; background: #f9fafb; transition: 0.2s ease; }
+.doc-item:hover { background: #fffbea; }
+.doc-item label { display: flex; align-items: center; gap: 10px; cursor: pointer; color: #111827; }
+footer { margin-top: 16px; font-size: 0.9rem; color: var(--muted); text-align: center; }
 
-    /* ✅ Responsive Layout */
-    @media (max-width: 768px) {
-      .cols-2 {
-        grid-template-columns: 1fr;
-      }
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-      header img {
-        height: 60px;
-      }
-      .advisor-info {
-        margin-top: 4px;
-      }
-      .actions {
-        justify-content: center;
-      }
-      button {
-        width: 100%;
-      }
-    }
-  </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+/* Alternate shading for sections in PDF */
+.card-section:nth-child(even) { background: #fef9ec; }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <img src="https://www.dailypioneer.com/uploads/2022/story/images/big/lic-should-opt-for--a-rights-issue-2022-11-15.jpg" alt="LIC Logo">
-      <div>
-        <div class="advisor-info">Sathi M<br>Insurance Adviser</div>
-        <h1>LIC Customer Data Sheet</h1>
-      </div>
-    </header>
-
-    <form id="licForm" class="card" autocomplete="off">
-      <!-- Personal Details -->
-      <section>
-        <div class="section-title">👤 Personal Details</div>
-        <div class="grid cols-2">
-          <div><label>Name</label><input id="name" required></div>
-          <div><label>Date of Birth</label><input type="date" id="dob"></div>
-          <div><label>Mobile Number</label><input type="tel" id="mobile"></div>
-          <div><label>Email</label><input type="email" id="email"></div>
-          <div><label>Payment Mode</label>
-            <select id="mode">
-              <option>Quarterly</option>
-              <option>Half-Yearly</option>
-              <option>Yearly</option>
-              <option>Monthly</option>
-            </select>
-          </div>
-          <div><label>PAN</label><input id="pan" maxlength="10"></div>
-          <div><label>Aadhaar Number (12 digits)</label><input id="aadhar" maxlength="12" pattern="\d{12}" title="Enter 12 digit number"></div>
-        </div>
-      </section>
-
-      <hr>
-
-      <!-- Family Details -->
-      <section>
-        <div class="section-title">👨‍👩‍👧 Family Details</div>
-        <div class="grid cols-2">
-          <div><label>Father's Name</label><input id="father"></div>
-          <div><label>Spouse's Name</label><input id="spouse"></div>
-          <div><label>Spouse Job & Income</label><input id="spouseIncome"></div>
-          <div><label>Father's Age</label><input id="fatherAge" type="number"></div>
-          <div><label>Mother's Age</label><input id="motherAge" type="number"></div>
-        </div>
-      </section>
-
-      <hr>
-
-      <!-- Employment Details -->
-      <section>
-        <div class="section-title">🏢 Employment Details</div>
-        <div class="grid cols-2">
-          <div><label>Job</label><input id="job"></div>
-          <div><label>Qualification</label>
-            <select id="qualification">
-              <option>10th</option>
-              <option>12th</option>
-              <option>Graduate</option>
-              <option>Post Graduate</option>
-              <option>Professional</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div><label>Employer</label><input id="employer"></div>
-          <div><label>Income</label><input id="income"></div>
-        </div>
-      </section>
-
-      <hr>
-
-      <!-- Address & Bank -->
-      <section>
-        <div class="section-title">🏠 Address & Bank</div>
-        <div class="grid">
-          <div><label>Address</label><textarea id="address" rows="2"></textarea></div>
-          <div class="cols-2">
-            <div><label>Account Number</label><input id="account" pattern="\d+" title="Only numbers allowed"></div>
-            <div><label>IFSC Code</label><input id="ifsc"></div>
-          </div>
-        </div>
-      </section>
-
-      <hr>
-
-      <!-- Physical Details -->
-      <section>
-        <div class="section-title">⚖️ Physical Details & Nominee</div>
-        <div class="grid cols-2">
-          <div><label>Height (cm)</label><input id="height" type="number" step="0.1" max="9999.9"></div>
-          <div><label>Weight (kg)</label><input id="weight" type="number" max="99"></div>
-          <div><label>Nominee</label><input id="nominee"></div>
-          <div><label>Notes</label><input id="notes"></div>
-          <div><label>Do you have policy?</label>
-            <select id="hasPolicy" onchange="togglePolicyField()">
-              <option value="No">No</option>
-              <option value="Yes">Yes</option>
-            </select>
-          </div>
-          <div id="policyField" style="display:none;">
-            <label>Policy Number</label><input id="policyNumber">
-          </div>
-        </div>
-      </section>
-
-      <hr>
-
-      <!-- Document Submission -->
-      <section>
-        <div class="section-title">📎 Document Submission</div>
-        <p>Please submit the below documents (tick the ones provided):</p>
-        <div class="checkbox-group">
-          <label><input type="checkbox" id="docAadhar"> Aadhaar Card / PAN</label>
-          <label><input type="checkbox" id="docSSLC"> SSLC Certificate</label>
-          <label><input type="checkbox" id="docBank"> Bank Account First Page</label>
-        </div>
-      </section>
-
-      <div class="actions">
-        <button type="button" id="generatePdf">🟨 Generate PDF</button>
-      </div>
-      <footer>Please download the PDF and send it to 9946460880</footer>
-    </form>
+<div class="container">
+<header>
+  <img src="https://www.dailypioneer.com/uploads/2022/story/images/big/lic-should-opt-for--a-rights-issue-2022-11-15.jpg" alt="LIC Logo">
+  <div>
+    <h1>LIC Customer Data Sheet</h1>
+    <div class="adviser">Sathi M<br>Insurance Adviser</div>
   </div>
+</header>
 
-  <script>
-    function togglePolicyField(){
-      document.getElementById('policyField').style.display =
-        document.getElementById('hasPolicy').value === 'Yes' ? 'block' : 'none';
-    }
+<form id="licForm">
+  <!-- Personal Details -->
+  <section class="card-section">
+    <div class="section-title">👤 Personal Details</div>
+    <div class="grid cols-2">
+      <div><label>Name</label><input id="name" required></div>
+      <div><label>Date of Birth</label><input id="dob" type="date"></div>
+      <div><label>Mobile Number</label><input id="mobile" type="tel"></div>
+      <div><label>Email</label><input id="email" type="email"></div>
+      <div>
+        <label>Payment Mode</label>
+        <select id="mode">
+          <option value="">Select</option>
+          <option value="Qly">Qly</option>
+          <option value="Hly">Hly</option>
+          <option value="Yly">Yly</option>
+          <option value="Mly">Mly</option>
+        </select>
+      </div>
+      <div><label>PAN</label><input id="pan" maxlength="10"></div>
+      <div><label>Aadhaar (12 digits)</label><input id="aadhar" type="text" pattern="[0-9]{12}" maxlength="12"></div>
+    </div>
+  </section>
 
-    document.getElementById('generatePdf').addEventListener('click', async ()=>{
-      try {
-        const clone = document.getElementById('licForm').cloneNode(true);
-        clone.querySelector('.actions').remove();
-        const wrapper = document.createElement('div');
-        wrapper.style.padding = '18px';
-        wrapper.appendChild(clone);
+  <!-- Family Details -->
+  <section class="card-section">
+    <div class="section-title">👨‍👩‍👧 Family Details</div>
+    <div class="grid cols-2">
+      <div><label>Father’s Name</label><input id="father"></div>
+      <div><label>Spouse’s Name</label><input id="spouse"></div>
+      <div><label>Spouse Job & Income</label><input id="spouseIncome"></div>
+      <div><label>Father’s Age</label><input id="fatherAge" type="number"></div>
+      <div><label>Mother’s Age</label><input id="motherAge" type="number"></div>
+    </div>
+  </section>
 
-        const fileName = 'LIC_DataSheet_' + (document.getElementById('name').value || 'Customer') + '.pdf';
-        const opt = {
-          margin: 10,
-          filename: fileName,
-          image: { type: 'jpeg', quality: 0.98 },
-          html2canvas: { scale: 2, useCORS: true },
-          jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-        };
+  <!-- Employment Details -->
+  <section class="card-section">
+    <div class="section-title">🏢 Employment Details</div>
+    <div class="grid cols-2">
+      <div><label>Job</label><input id="job"></div>
+      <div>
+        <label>Qualification</label>
+        <select id="qualification">
+          <option value="">Select</option>
+          <option>10th</option>
+          <option>12th</option>
+          <option>Graduate</option>
+          <option>Post Graduate</option>
+          <option>Professional</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div><label>Employer</label><input id="employer"></div>
+      <div><label>Income</label><input id="income" type="text"></div>
+    </div>
+  </section>
 
-        await html2pdf().from(wrapper).set(opt).save();
-        alert('✅ PDF generated and downloaded successfully.');
-      } catch (err) {
-        alert('❌ Failed to generate PDF: ' + err.message);
-      }
-    });
-  </script>
+  <!-- Address & Bank -->
+  <section class="card-section">
+    <div class="section-title">🏠 Address & Bank</div>
+    <div class="grid">
+      <div><label>Address</label><textarea id="address" rows="2"></textarea></div>
+      <div class="grid cols-2">
+        <div><label>Account Number</label><input id="account" type="text" pattern="[0-9]+" maxlength="18"></div>
+        <div><label>IFSC Code</label><input id="ifsc"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Physical & Policy -->
+  <section class="card-section">
+    <div class="section-title">⚖️ Physical Details & Nominee</div>
+    <div class="grid cols-2">
+      <div><label>Height (cm)</label><input id="height" type="number" step="0.1" max="9999.9"></div>
+      <div><label>Weight (kg)</label><input id="weight" type="number" max="99"></div>
+      <div><label>Nominee</label><input id="nominee"></div>
+      <div><label>Notes</label><input id="notes"></div>
+      <div>
+        <label>Do you have an LIC Policy?</label>
+        <select id="policy">
+          <option value="">Select</option>
+          <option value="No">No</option>
+          <option value="Yes">Yes</option>
+        </select>
+      </div>
+      <div id="policyNumberDiv" style="display:none;">
+        <label>Policy Number</label>
+        <input id="policyNumber" maxlength="12" placeholder="Enter Policy Number">
+      </div>
+    </div>
+  </section>
+
+  <!-- Documents -->
+  <section class="card-section">
+    <div class="section-title">📎 Document Submission</div>
+    <p>Please submit the below documents (tick the ones provided):</p>
+    <div class="document-list">
+      <div class="doc-item"><label><input type="checkbox"> Aadhaar Card / PAN</label></div>
+      <div class="doc-item"><label><input type="checkbox"> SSLC Certificate</label></div>
+      <div class="doc-item"><label><input type="checkbox"> Bank Account First Page</label></div>
+    </div>
+  </section>
+
+  <div class="actions">
+    <button type="button" id="generatePdf">Generate PDF</button>
+  </div>
+</form>
+
+<footer>Please download the PDF and send it to 9946460880</footer>
+
+<script>
+document.getElementById('policy').addEventListener('change', () => {
+  document.getElementById('policyNumberDiv').style.display =
+    document.getElementById('policy').value === 'Yes' ? 'block' : 'none';
+});
+
+document.getElementById('generatePdf').addEventListener('click', async () => {
+  const clone = document.getElementById('licForm').cloneNode(true);
+  const btns = clone.querySelectorAll('.actions'); btns.forEach(b=>b.remove());
+  const wrapper = document.createElement('div'); wrapper.style.padding='18px'; wrapper.appendChild(clone);
+  const opt = {
+    margin:10,
+    filename:`LIC_DataSheet_${document.getElementById('name').value||'Customer'}.pdf`,
+    image:{type:'jpeg',quality:0.98},
+    html2canvas:{scale:2,useCORS:true},
+    jsPDF:{unit:'mm',format:'a4',orientation:'portrait'}
+  };
+  await html2pdf().from(wrapper).set(opt).save();
+  alert('PDF generated successfully.');
+});
+</script>
 </body>
 </html>
