@@ -1,75 +1,40 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>LIC Customer Data Sheet — Sathi M</title>
-  <style>
-    :root {
-      --accent: #f5b800;
-      --brand: #003366;
-      --card: #ffffff;
-      --muted: #6b7280;
-    }
-    body {
-      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      background: #f3f4f6;
-      padding: 24px;
-      margin: 0;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 12px;
-    }
-    header img {
-      height: 56px;
-      width: auto;
-    }
-    .adviser-info {
-      font-size: 0.85rem;
-      color: var(--brand);
-      font-style: italic;
-      margin-top: 4px;
-    }
-    h1 {
-      font-size: 1.3rem;
-      margin: 0;
-      color: var(--brand);
-    }
-    .card {
-      background: var(--card);
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(2,6,23,0.08);
-      padding: 18px;
-      margin-top: 16px;
-    }
-    .grid { display: grid; gap: 12px; }
-    .cols-2 { grid-template-columns: 1fr 1fr; }
-    label { font-size: 0.85rem; color: var(--muted); display: block; margin-bottom: 6px; }
-    input, select, textarea {
-      width: 100%; padding: 10px; border: 1px solid #e6e7ea; border-radius: 8px; font-size: 0.95rem; box-sizing: border-box;
-    }
-    .row { display: flex; gap: 12px; }
-    .small { width: 120px; }
-    .actions { display: flex; gap: 12px; justify-content: flex-end; margin-top: 14px; }
-    button { border: 0; padding: 10px 14px; border-radius: 10px; font-weight: 600; cursor: pointer; }
-    .btn-yellow { background: var(--accent); color: #032; }
-    .note { font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
-    footer { margin-top: 12px; font-size: 0.85rem; color: var(--muted); }
-    .section-title { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; font-weight: 700; color: var(--brand); }
-    .document-options { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
-    .document-options label { display: flex; align-items: center; gap: 6px; font-size: 0.95rem; }
-    @media (max-width: 720px) { .cols-2 { grid-template-columns: 1fr; } header img { height: 48px; } }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LIC Customer Data Sheet — Sathi M</title>
+<style>
+:root{--accent:#f5b800;--brand:#003366;--card:#ffffff;--muted:#6b7280}
+body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;background:#f3f4f6;padding:24px;margin:0}
+.container{max-width:900px;margin:0 auto}
+header{display:flex;align-items:center;gap:16px;margin-bottom:12px}
+header img{height:56px;width:auto}
+.adviser-info{font-size:0.85rem;color:var(--brand);font-style:italic;margin-top:4px}
+h1{font-size:1.3rem;margin:0;color:var(--brand)}
+.card{background:var(--card);border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.08);padding:18px;margin-top:16px}
+.grid{display:grid;gap:12px}
+.cols-2{grid-template-columns:1fr 1fr}
+label{font-size:0.85rem;color:var(--muted);display:block;margin-bottom:6px}
+input,select,textarea{width:100%;padding:10px;border:1px solid #e6e7ea;border-radius:8px;font-size:0.95rem;box-sizing:border-box}
+.row{display:flex;gap:12px}
+.small{width:120px}
+.actions{display:flex;gap:12px;justify-content:flex-end;margin-top:14px}
+button{border:0;padding:10px 14px;border-radius:10px;font-weight:600;cursor:pointer}
+.btn-yellow{background:var(--accent);color:#032}
+.note{font-size:0.85rem;color:var(--muted);margin-top:8px}
+footer{margin-top:12px;font-size:0.85rem;color:var(--muted)}
+.section-title{display:flex;gap:8px;align-items:center;margin-bottom:8px;font-weight:700;color:var(--brand)}
+.dob{display:flex;gap:8px}
+.document-options{display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin-top:8px}
+.document-options label{display:flex;align-items:center;gap:6px;font-size:0.95rem}
+@media(max-width:720px){.cols-2{grid-template-columns:1fr}header img{height:48px}}
+</style>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<!-- HTML2PDF for PDF generation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+<!-- EmailJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -103,8 +68,9 @@
       </div>
     </section>
 
+    <hr style="margin:14px 0;border:none;border-top:1px solid #eef2f6">
+
     <!-- Family Details -->
-    <hr>
     <section>
       <div class="section-title">👨‍👩‍👧 Family Details</div>
       <div class="grid cols-2">
@@ -116,8 +82,9 @@
       </div>
     </section>
 
+    <hr style="margin:14px 0;border:none;border-top:1px solid #eef2f6">
+
     <!-- Employment Details -->
-    <hr>
     <section>
       <div class="section-title">🏢 Employment Details</div>
       <div class="grid cols-2">
@@ -137,8 +104,9 @@
       </div>
     </section>
 
+    <hr style="margin:14px 0;border:none;border-top:1px solid #eef2f6">
+
     <!-- Address & Bank -->
-    <hr>
     <section>
       <div class="section-title">🏠 Address & Bank</div>
       <div class="grid">
@@ -150,8 +118,9 @@
       </div>
     </section>
 
-    <!-- Physical & Policy -->
-    <hr>
+    <hr style="margin:14px 0;border:none;border-top:1px solid #eef2f6">
+
+    <!-- Physical Details & Nominee -->
     <section>
       <div class="section-title">⚖️ Physical Details & Nominee</div>
       <div class="grid cols-2">
@@ -169,8 +138,9 @@
       </div>
     </section>
 
-    <!-- Documents -->
-    <hr>
+    <hr style="margin:14px 0;border:none;border-top:1px solid #eef2f6">
+
+    <!-- Document Submission -->
     <section>
       <div class="section-title">📎 Document Submission</div>
       <p>Please submit the below documents (tick the ones provided):</p>
@@ -189,73 +159,4 @@
 </div>
 
 <script>
-  // Initialize EmailJS
-  (function(){ emailjs.init("4kosQtFaQpZ-KrwHy"); })();
-
-  document.getElementById('generatePdf').addEventListener('click', async () => {
-    const form = document.getElementById('licForm');
-
-    // 1️⃣ Generate PDF
-    try {
-      const clone = form.cloneNode(true);
-      clone.querySelectorAll('.actions').forEach(b => b.remove());
-      const wrapper = document.createElement('div');
-      wrapper.style.padding = '18px';
-      wrapper.style.fontFamily = 'Arial, Helvetica, sans-serif';
-      wrapper.style.color = '#111';
-      wrapper.appendChild(clone);
-
-      const opt = {
-        margin: 10,
-        filename: `LIC_DataSheet_${document.getElementById('name').value || 'Name'}.pdf`,
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-      };
-
-      await html2pdf().from(wrapper).set(opt).save();
-      alert('✅ PDF generated successfully.');
-    } catch(err) {
-      console.error(err);
-      alert('❌ Failed to generate PDF: ' + err.message);
-    }
-
-    // 2️⃣ Send Email via EmailJS
-    emailjs.send("service_uwe50x9", "template_yeal3ns", {
-      name: form.name.value,
-      dob: form.dob.value,
-      mobile: form.mobile.value,
-      email: form.email.value,
-      mode: form.mode.value,
-      pan: form.pan.value,
-      aadhar: form.aadhar.value,
-      father: form.father.value,
-      spouse: form.spouse.value,
-      spouseIncome: form.spouseIncome.value,
-      fatherAge: form.fatherAge.value,
-      motherAge: form.motherAge.value,
-      job: form.job.value,
-      qualification: form.qualification.value,
-      employer: form.employer.value,
-      income: form.income.value,
-      address: form.address.value,
-      account: form.account.value,
-      ifsc: form.ifsc.value,
-      height: form.height.value,
-      weight: form.weight.value,
-      nominee: form.nominee.value,
-      policy: form.policy.value,
-      policyNo: form.policyNo.value,
-      docAadhar: form.querySelector('input[name="docAadhar"]').checked ? "Yes" : "No",
-      docSSLC: form.querySelector('input[name="docSSLC"]').checked ? "Yes" : "No",
-      docBank: form.querySelector('input[name="docBank"]').checked ? "Yes" : "No"
-    }).then(() => {
-      alert('📧 Form sent successfully via email!');
-    }, (err) => {
-      console.error(err);
-      alert('❌ Failed to send email. Check EmailJS configuration.');
-    });
-  });
-</script>
-</body>
-</html>
+  emailjs.init("4kos
