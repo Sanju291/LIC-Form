@@ -17,31 +17,125 @@
       padding: 24px;
       margin: 0;
     }
-    .container { max-width: 900px; margin: 0 auto; }
-    header { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
-    header img { height: 56px; width: auto; }
-    .adviser-info { font-size: 0.85rem; color: var(--brand); font-style: italic; margin-top: 4px; }
-    h1 { font-size: 1.3rem; margin: 0; color: var(--brand); }
-    .card { background: var(--card); border-radius: 12px; box-shadow: 0 6px 18px rgba(2,6,23,0.08); padding: 18px; margin-top: 16px; }
-    .grid { display: grid; gap: 12px; }
-    .cols-2 { grid-template-columns: 1fr 1fr; }
-    label { font-size: 0.85rem; color: var(--muted); display: block; margin-bottom: 6px; }
-    input, select, textarea { width: 100%; padding: 10px; border: 1px solid #e6e7ea; border-radius: 8px; font-size: 0.95rem; box-sizing: border-box; }
-    .row { display: flex; gap: 12px; }
-    .small { width: 120px; }
-    .actions { display: flex; gap: 12px; justify-content: flex-end; margin-top: 14px; }
-    button { border: 0; padding: 10px 14px; border-radius: 10px; font-weight: 600; cursor: pointer; }
-    .btn-yellow { background: var(--accent); color: #032; }
-    .note { font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
-    footer { margin-top: 12px; font-size: 0.85rem; color: var(--muted); }
-    .section-title { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; font-weight: 700; color: var(--brand); }
-    .dob { display: flex; gap: 8px; }
-    .document-options { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
-    .document-options label { display: flex; align-items: center; gap: 6px; font-size: 0.95rem; }
-    @media (max-width: 720px) { .cols-2 { grid-template-columns: 1fr; } header img { height: 48px; } }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+    header img {
+      height: 56px;
+      width: auto;
+    }
+    .adviser-info {
+      font-size: 0.85rem;
+      color: var(--brand);
+      font-style: italic;
+      margin-top: 4px;
+    }
+    h1 {
+      font-size: 1.3rem;
+      margin: 0;
+      color: var(--brand);
+    }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(2,6,23,0.08);
+      padding: 18px;
+      margin-top: 16px;
+    }
+    .grid {
+      display: grid;
+      gap: 12px;
+    }
+    .cols-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+    label {
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 6px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #e6e7ea;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      box-sizing: border-box;
+    }
+    .small {
+      width: 120px;
+    }
+    .actions {
+      display: flex;
+      gap: 12px;
+      justify-content: flex-end;
+      margin-top: 14px;
+    }
+    button {
+      border: 0;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-yellow {
+      background: var(--accent);
+      color: #032;
+    }
+    .note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+    footer {
+      margin-top: 12px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .section-title {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 8px;
+      font-weight: 700;
+      color: var(--brand);
+    }
+    .dob {
+      display: flex;
+      gap: 8px;
+    }
+    .document-options {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 8px;
+    }
+    .document-options label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 720px) {
+      .cols-2 {
+        grid-template-columns: 1fr;
+      }
+      header img {
+        height: 48px;
+      }
+    }
   </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -75,8 +169,9 @@
       </div>
     </section>
 
-    <!-- Family Details -->
     <hr style="margin:14px 0;border:none;border-top:1px solid #eef2f6">
+
+    <!-- Family Details -->
     <section>
       <div class="section-title">👨‍👩‍👧 Family Details</div>
       <div class="grid cols-2">
@@ -88,8 +183,9 @@
       </div>
     </section>
 
-    <!-- Employment Details -->
     <hr style="margin:14px 0;border:none;border-top:1px solid #eef2f6">
+
+    <!-- Employment Details -->
     <section>
       <div class="section-title">🏢 Employment Details</div>
       <div class="grid cols-2">
@@ -109,8 +205,9 @@
       </div>
     </section>
 
-    <!-- Address & Bank -->
     <hr style="margin:14px 0;border:none;border-top:1px solid #eef2f6">
+
+    <!-- Address & Bank -->
     <section>
       <div class="section-title">🏠 Address & Bank</div>
       <div class="grid">
@@ -122,10 +219,11 @@
       </div>
     </section>
 
-    <!-- Physical & Policy -->
     <hr style="margin:14px 0;border:none;border-top:1px solid #eef2f6">
+
+    <!-- Physical & Nominee -->
     <section>
-      <div class="section-title">⚖️ Physical Details & Policy</div>
+      <div class="section-title">⚖️ Physical Details & Nominee</div>
       <div class="grid cols-2">
         <div><label for="height">Height (cm)</label><input id="height" name="height" type="number" max="9999" step="0.1"></div>
         <div><label for="weight">Weight (kg)</label><input id="weight" name="weight" type="number" max="99"></div>
@@ -141,14 +239,15 @@
       </div>
     </section>
 
-    <!-- Document Submission -->
     <hr style="margin:14px 0;border:none;border-top:1px solid #eef2f6">
+
+    <!-- Document Submission -->
     <section>
       <div class="section-title">📎 Document Submission</div>
       <div class="document-options">
-        <label><input type="checkbox" name="docAadhaar"> Aadhaar Card / PAN</label>
-        <label><input type="checkbox" name="docSSLC"> SSLC Certificate</label>
-        <label><input type="checkbox" name="docBank"> Bank Account First Page</label>
+        <label><input type="checkbox"> Aadhaar Card / PAN</label>
+        <label><input type="checkbox"> SSLC Certificate</label>
+        <label><input type="checkbox"> Bank Account First Page</label>
       </div>
     </section>
 
@@ -160,14 +259,14 @@
 </div>
 
 <script>
-  emailjs.init("4kosQtFaQpZ-KrwHy"); // Public Key
+  emailjs.init("4kosQtFaQpZ-KrwHy"); // your public key
 
   document.getElementById('generatePdf').addEventListener('click', async () => {
     const form = document.getElementById('licForm');
 
-    // 1️⃣ Generate PDF
+    // ✅ Generate PDF
     const clone = form.cloneNode(true);
-    clone.querySelectorAll('.actions').forEach(el => el.remove());
+    const buttons = clone.querySelectorAll('.actions'); buttons.forEach(b => b.remove());
     const wrapper = document.createElement('div');
     wrapper.style.padding = '18px';
     wrapper.style.fontFamily = 'Arial, Helvetica, sans-serif';
@@ -182,22 +281,16 @@
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
 
-    try {
-      await html2pdf().from(wrapper).set(opt).save();
+    await html2pdf().from(wrapper).set(opt).save();
 
-      // 2️⃣ Send Email via EmailJS
-      emailjs.sendForm('service_uwe50x9', 'template_yeal3ns', form)
-        .then(function() {
-          alert('✅ PDF downloaded and email sent successfully!');
-        }, function(error) {
-          console.error(error);
-          alert('PDF downloaded but email failed: ' + error.text);
-        });
-
-    } catch (err) {
-      console.error(err);
-      alert('Failed to generate PDF: ' + err.message);
-    }
+    // ✅ Send Email
+    emailjs.sendForm("service_uwe50x9", "template_yeal3ns", form)
+      .then(function() {
+        alert("✅ PDF generated and email sent successfully!");
+      }, function(error) {
+        console.error("❌ Error:", error);
+        alert("There was an error sending the email. Please try again later.");
+      });
   });
 </script>
 </body>
