@@ -87,13 +87,7 @@ button {
   box-shadow: 0 3px 8px rgba(0,0,0,0.15); transition: all 0.2s ease-in-out;
 }
 button:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-.document-list { display: grid; gap: 10px; margin-top: 10px; }
-.doc-item { border: 1px solid #d1d5db; border-radius: 8px; padding: 10px 12px; background: #f9fafb; transition: 0.2s ease; }
-.doc-item:hover { background: #fffbea; }
-.doc-item label { display: flex; align-items: center; gap: 10px; cursor: pointer; color: #111827; }
 footer { margin-top: 16px; font-size: 0.9rem; color: var(--muted); text-align: center; }
-
-/* Alternate shading for sections in PDF */
 .card-section:nth-child(even) { background: #fef9ec; }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
@@ -124,12 +118,12 @@ footer { margin-top: 16px; font-size: 0.9rem; color: var(--muted); text-align: c
           <option value="">Select</option>
           <option value="Qly">Qly</option>
           <option value="Hly">Hly</option>
-          <option value="Yly">Yly</option>
           <option value="Mly">Mly</option>
+          <option value="Yly">Yly</option>
         </select>
       </div>
       <div><label>PAN</label><input id="pan" maxlength="10"></div>
-      <div><label>Aadhaar (12 digits)</label><input id="aadhar" type="text" pattern="[0-9]{12}" maxlength="12"></div>
+      <div><label>Aadhaar (12 digits)</label><input id="aadhar" type="text" pattern="\d{12}" maxlength="12" required oninput="this.value=this.value.replace(/[^0-9]/g,'')"></div>
     </div>
   </section>
 
@@ -173,7 +167,7 @@ footer { margin-top: 16px; font-size: 0.9rem; color: var(--muted); text-align: c
     <div class="grid">
       <div><label>Address</label><textarea id="address" rows="2"></textarea></div>
       <div class="grid cols-2">
-        <div><label>Account Number</label><input id="account" type="text" pattern="[0-9]+" maxlength="18"></div>
+        <div><label>Account Number</label><input id="account" type="text" pattern="[0-9]+" maxlength="18" oninput="this.value=this.value.replace(/[^0-9]/g,'')"></div>
         <div><label>IFSC Code</label><input id="ifsc"></div>
       </div>
     </div>
@@ -206,10 +200,10 @@ footer { margin-top: 16px; font-size: 0.9rem; color: var(--muted); text-align: c
   <section class="card-section">
     <div class="section-title">📎 Document Submission</div>
     <p>Please submit the below documents (tick the ones provided):</p>
-    <div class="document-list">
-      <div class="doc-item"><label><input type="checkbox"> Aadhaar Card / PAN</label></div>
-      <div class="doc-item"><label><input type="checkbox"> SSLC Certificate</label></div>
-      <div class="doc-item"><label><input type="checkbox"> Bank Account First Page</label></div>
+    <div style="display:flex; gap:20px; flex-wrap:wrap; margin-top:8px;">
+      <label><input type="checkbox"> Aadhaar Card / PAN</label>
+      <label><input type="checkbox"> SSLC Certificate</label>
+      <label><input type="checkbox"> Bank Account First Page</label>
     </div>
   </section>
 
